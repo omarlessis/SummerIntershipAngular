@@ -1,0 +1,223 @@
+.blue-button {
+    background-color: #00538B; /* Couleur de fond bleue */
+    color: white; /* Couleur du texte en blanc */
+    border: none; /* Supprime la bordure */
+    padding: 8px 20px; /* Espacement intérieur du bouton */
+    cursor: pointer; /* Curseur en main lors du survol */
+    margin-bottom: 10px; /* Espacement sous le bouton */
+    float: right; /* Pour placer le bouton à droite */
+    width: 180px;
+    height: 100;
+    border-radius: 50px;
+    margin-left: 1130px;
+  }
+  
+  
+    .white-box {
+      
+          background-color: rgb(255, 255, 255);
+          border-radius: 8px;
+          padding: 10px;
+          max-width: 100%;
+          overflow-x: auto;
+        }
+    
+    
+    .table-row {
+      width: 100%;
+      display: flex;
+      border: 1px solid white;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      height: 50px;
+    }
+    
+    .header-row {
+      width: 100%;
+      background-color: #FFCE00;
+      border-color: #FFCE00;
+      border-radius: 8px;
+      position: sticky;
+      top: 0;
+      height: 50px;
+      z-index: 1;
+    }
+    
+    .data-box {
+      flex: 1;
+      padding: 10px;
+      white-space: nowrap;
+      overflow-wrap: break-word; /* Ajoutez cette ligne pour forcer le texte à se casser */
+      width: 500px;
+      margin-top: 5px;
+      margin-left: 70px;
+    }
+   
+  
+   
+    
+    #ajouter-button {
+      background-color: #00538B;
+      color: white;
+      border: none;
+      font-weight: 600;
+      width: 150px;
+      font-size: 15px;
+      height: 40px;
+      padding: 5px 10px;
+      border-radius: 50px;
+margin-right: 10px;
+      cursor: pointer;
+  }
+  
+  /* Style pour l'en-tête contenant le bouton et le titre */
+  .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+  }
+
+  /* Styliser les boutons d'action */
+.data-box button {
+  margin-right: 5px;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* Ajouter des couleurs spécifiques aux boutons */
+.edit-button {
+  color: black; /* Couleur pour le bouton d'édition */
+  
+}
+
+.delete-button {
+  color: red; /* Couleur pour le bouton de suppression */
+}
+.icon-small {
+  font-size: 25px; /* Taille des icônes (personnalisez selon vos besoins) */
+margin-top: -7px;
+}
+
+
+  @media (max-width: 1200px) {
+    .table-row {
+      width: 1200px; /* Changez la largeur des lignes à 1200px lorsque la taille de l'écran est réduite */
+    }
+  
+    /* Vous pouvez également ajuster d'autres styles si nécessaire */
+    .date-picker-container {
+      flex-direction: column; /* Lorsque l'écran est réduit, affichez les sélecteurs de dates l'un au-dessus de l'autre */
+    }
+  }/* Styliser la barre de recherche */
+/* Styliser la barre de recherche */
+/* Styliser la barre de recherche */
+.search-field {
+    display: flex;
+    align-items: center;
+    border: 1px solid #dfe1e5;
+    border-radius: 20px; /* Réduire le rayon du coin */    background-color: #f1f3f4;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  /* Styliser l'icône de recherche */
+  .search-icon {
+    font-size: 16px; /* Réduire la taille de l'icône */
+    color: #5f6368;
+    margin-right: 4px;
+  }
+  
+  /* Styliser le champ de recherche */
+  .mat-input-element {
+    border: none;
+    background-color: transparent;
+    font-size: 14px; /* Réduire la taille de la police */
+    color: #333;
+    width: 100%;
+  }
+  
+  /* Effet de survol */
+  .search-field:hover {
+    background-color: #fff;
+    border-color: #DDDDDD;
+
+  }
+  .search-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-input {
+    padding: 8px;
+    height: 40px;
+    border: 2px solid #DDDDDD;
+    border-radius: 10px;
+    width: 300px;
+    margin-left: 10px;
+
+
+  }
+  .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right:  10px; /* Ajustez la valeur pour le positionnement horizontal */
+    color: #555;
+  }
+  .white-box2{
+    background-color:white;
+    box-shadow: 80px 80px 80px 60px rgba(9, 9, 9, 0.1); 
+border-radius: 30px;
+padding: 5mm;
+
+}
+    
+.text-page{
+    margin-bottom: 70px;
+    margin-left: 10px;
+    margin-top: 20px ;
+font-size: 20px;
+
+}
+/* CSS pour limiter la hauteur de la cellule "Description" et afficher un point de suspension */
+.data-box.description {
+    max-height: 50px; /* Ajustez cette valeur selon vos besoins */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* CSS pour afficher les trois points verticaux pour lire la suite */
+  .data-box.description::after {
+    content: '\2026'; /* Points de suspension horizontaux */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: white;
+    padding: 0 2px;
+  }
+  /* CSS pour le bouton de trois points verticaux */
+.show-more-button {
+    display: flex;
+    align-items: center;
+  }
+  
+  .show-more-button button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  .text-page {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }

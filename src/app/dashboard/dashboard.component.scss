@@ -1,0 +1,12 @@
+/* social-logos.component.css */
+.social-logos {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 500px ;
+  }
+  
+  .social-logos img {
+    margin-right: 20px; /* Ajouter de l'espace entre les logos en augmentant cette valeur */
+  }
+  

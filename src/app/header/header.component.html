@@ -1,0 +1,100 @@
+<div class="head" [ngClass]="getHeadClass()">
+    <div class="head-content">
+        <div class="head-content-left">
+           
+            
+        </div>
+            <div class="head-content-right">
+                <div class="head-menu">
+                    <div class="head-menu-item">
+                       
+                    </div>
+                    
+                
+                  
+                <div class="head-user-avatar-container">
+                    <div class="head-user-avatar" >
+                      <img src="../../assets/user3.jpg" alt="user" class="user-avatar">
+                      <div class="circle-indicator pulse"></div>
+                    </div>
+                    <div class="head-user-info">
+                      <div class="head-username">
+                        <!-- Assuming `username` is a variable that holds the user's name -->
+                        Omar Lessis
+                        <span class="dropdown-arrow" [cdkMenuTriggerFor]="userOverlay">&#9662;</span>
+
+                      </div>
+
+                      <div class="head-user-role">
+                        <!-- Assuming `userRole` is a variable that holds the user's role (admin or user) -->
+Admin                       </div>
+
+
+                    </div>
+                  </div>
+                  
+                  
+                  
+
+        </div>
+    </div>
+</div>
+
+
+
+<ng-template #searchOverlay>
+    <div class="overlay overlay-search overlay-fall" cdkMenu>
+        <input type="search" name="search" id="" placeholder="Search...">
+        <button class="search-btn">
+            <i class="far fa-search search-icon"></i>
+        </button>
+    </div>
+
+</ng-template>
+
+<ng-template #languageOverlay>
+    <div class="overlay overlay-language overlay-fall" cdkMenu>
+        <ul>
+            <li *ngFor="let lang of languages" cdkMenuItem>
+                <img [src]="'assets/flags/' + lang.flag + '.jpg'" alt="flag">
+                <span>{{lang.language}}</span>
+            </li>
+        </ul>
+
+    </div>
+
+</ng-template>
+
+
+<ng-template #userOverlay>
+    <div class="overlay overlay-user overlay-fall" cdkMenu>
+        <ul>
+            <li *ngFor="let item of userItems" cdkMenuItem>
+                <a>
+                    <i class="icon" [ngClass]="item.icon"></i>
+                    <span>{{item.label}}</span>
+                </a>
+
+            </li>
+        </ul>
+    </div>
+
+</ng-template>
+
+<ng-template #userOverlay>
+    <div class="overlay overlay-user overlay-fall" cdkMenu>
+      <ul>
+        <!-- Vos options de menu déroulant ici -->
+        <li *ngFor="let item of userItems" (click)="handleOptionClick(item)">
+          <a>
+            <i class="fas" [ngClass]="item.icon"></i>
+            <span>{{ item.label }}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </ng-template>
+  
+  
+  
+  

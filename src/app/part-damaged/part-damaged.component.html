@@ -1,0 +1,40 @@
+<div class="white-box2">
+<div class="text-page">
+  Part-damaged 
+</div>
+<div class="header-container">
+    <div class="search-container">
+        <div class="search-icon">
+            <i class="fas fa-search"></i>
+          </div>
+        <input type="text" class="search-input" placeholder="Rechercher...">
+      </div>    
+          <button id="ajouter-button">Ajouter</button>
+    
+  </div>
+  <div class="table-container">
+  
+      <div class="white-box">
+     
+         <div class="table-row header-row">
+           <div class="data-box">Titre</div>
+           <div class="data-box">Description</div>
+           
+  
+           
+         </div>
+         <ng-container *ngFor="let item of dataSource.data">
+           <div class="table-row">
+             <div class="data-box">{{ item.Titre }}</div>
+             <div class="data-box description">{{ item.Description }}</div>
+             <div class="show-more-button">
+                <button (click)="showFullDescription(item)">⋮</button>
+              </div>
+
+         
+           </div>
+         </ng-container>
+      </div>
+     </div>
+</div> 
+       

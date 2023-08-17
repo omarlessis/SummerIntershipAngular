@@ -1,0 +1,118 @@
+/* products.component.css */
+
+/* CSS pour le bouton bleu */
+.blue-button {
+    background-color: #00538B; /* Couleur de fond bleue */
+    color: white; /* Couleur du texte en blanc */
+    border: none; /* Supprime la bordure */
+    padding: 8px 20px; /* Espacement intérieur du bouton */
+    cursor: pointer; /* Curseur en main lors du survol */
+    margin-bottom: 10px; /* Espacement sous le bouton */
+    float: right; /* Pour placer le bouton à droite */
+    width: 180px;
+    height: 100;
+    border-radius: 50px;
+    margin-left: 1130px;
+  }
+  
+  
+    .white-box {
+      
+          background-color: rgb(255, 255, 255);
+          border-radius: 8px;
+          padding: 10px;
+          max-width: 100%;
+          overflow-x: auto;
+        }
+    
+    
+    .table-row {
+      width: 100%;
+      display: flex;
+      border: 1px solid white;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      height: 50px;
+    }
+    
+    .header-row {
+      width: 100%;
+      background-color: #FFCE00;
+      border-color: #FFCE00;
+      border-radius: 8px;
+      position: sticky;
+      top: 0;
+      height: 50px;
+      z-index: 1;
+    }
+    
+    .data-box {
+      flex: 1;
+      padding: 10px;
+      white-space: nowrap;
+      overflow-wrap: break-word; /* Ajoutez cette ligne pour forcer le texte à se casser */
+      width: 500px;
+      margin-top: 5px;
+      margin-left: 70px;
+    }
+   
+  
+   
+    
+    #ajouter-button {
+      background-color: #00538B;
+      color: white;
+      border: none;
+      font-weight: 600;
+      width: 150px;
+      font-size: 15px;
+      height: 40px;
+      padding: 5px 10px;
+      border-radius: 50px;
+margin-right: 10px;
+      cursor: pointer;
+  }
+  
+  /* Style pour l'en-tête contenant le bouton et le titre */
+  .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+  }
+
+  /* Styliser les boutons d'action */
+.data-box button {
+  margin-right: 5px;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* Ajouter des couleurs spécifiques aux boutons */
+.edit-button {
+  color: black; /* Couleur pour le bouton d'édition */
+  
+}
+
+.delete-button {
+  color: red; /* Couleur pour le bouton de suppression */
+}
+.icon-small {
+  font-size: 25px; /* Taille des icônes (personnalisez selon vos besoins) */
+margin-top: -7px;
+}
+
+
+  @media (max-width: 1200px) {
+    .table-row {
+      width: 1200px; /* Changez la largeur des lignes à 1200px lorsque la taille de l'écran est réduite */
+    }
+  
+    /* Vous pouvez également ajuster d'autres styles si nécessaire */
+    .date-picker-container {
+      flex-direction: column; /* Lorsque l'écran est réduit, affichez les sélecteurs de dates l'un au-dessus de l'autre */
+    }
+  }

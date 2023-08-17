@@ -1,0 +1,93 @@
+<style>
+    /* ... Vos styles personnalisés pour le sélecteur de dates existants ... */
+  
+    /* Custom styles for the date picker icon */
+    input[type="date"] {
+      color: rgba(0, 0, 0, 0.547);
+      font-size: 16px;
+      font-weight: 100;
+      padding-right: 30px;
+      background-image: url('path/to/custom-calendar-icon.png');
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 20px;
+      border-radius: 15px;
+      padding: 10px;
+      border: 1px solid #DDDDDD ; /* Change the border color to gray */
+      width: 500px; /* Largeur par défaut */
+      height: 40px;
+    }
+  
+    /* Custom styles to change the color of the calendar icon */
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      font-size: 30px;
+      filter: invert(30%) sepia(100%) saturate(5000%) hue-rotate(190deg);
+    }
+  
+    /* Ajoutez les Media Queries pour ajuster la largeur des input[type="date"] en fonction de la taille de l'écran */
+    @media (width: 200px) {
+      input[type="date"] {
+        width: 100px; /* Les input[type="date"] occuperont la largeur complète de l'écran lorsque la taille est réduite */
+      }
+    }
+  </style>
+  
+  <div class="date-picker-box">
+    <h2> Période</h2>
+  
+    <div class="date-picker-container">
+      <div>
+        <label for="startDate" class="date-label">Du</label>
+        <input type="date" id="startDate" name="startDate" class="custom-date-input">
+      </div>
+      <div>
+        <label for="endDate" class="date-label">Au</label>
+        <input type="date" id="endDate" name="endDate" class="custom-date-input">
+      </div>
+      
+    </div>
+
+  </div>
+
+
+
+
+<!-- products.component.html -->
+<div class="table-container">
+
+ <div class="white-box">
+  <div>
+  <button class="blue-button">Exporter vers Excel</button>
+ </div>
+    <div class="table-row header-row">
+      <div class="data-box">Date</div>
+      <div class="data-box">Contrôleur</div>
+      <div class="data-box">Date de début</div>
+      <div class="data-box">Date de fin</div>
+      <div class="data-box">VIN</div>
+      <div class="data-box">Element Endommagé</div>
+      <div class="data-box">Nature du dommage</div>
+      <div class="data-box">Taille du dommage</div>
+      <div class="data-box">Position</div>
+      <div class="data-box">Type</div>
+      <div class="data-box">Remarque</div>
+    </div>
+    <ng-container *ngFor="let item of dataSource.data">
+      <div class="table-row">
+        <div class="data-box">{{ item.date }}</div>
+        <div class="data-box">{{ item.controleur }}</div>
+        <div class="data-box">{{ item.dateDebut }}</div>
+        <div class="data-box">{{ item.dateFin }}</div>
+        <div class="data-box">{{ item.vin }}</div>
+        <div class="data-box">{{ item.elementEndommage }}</div>
+        <div class="data-box">{{ item.naturedudommage }}</div>
+        <div class="data-box">{{ item.tailledommage }}</div>
+        <div class="data-box">{{ item.position }}</div>
+        <div class="data-box">{{ item.type }}</div>
+        <div class="data-box">{{ item.remarque }}</div>
+      </div>
+    </ng-container>
+ </div>
+</div>
+
+  

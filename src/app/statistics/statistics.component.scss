@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Aligner les éléments en haut */
+  height: 100vh;
+  margin-top: 40px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0; /* Augmentation de la marge verticale */
+}
+
+.btn {
+  padding: 15px 25px; /* Légère augmentation du padding */
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px; /* Légère augmentation de la taille de la police */
+  font-weight: 700;
+}
+
+.btn-yellow {
+  background-color: #FFCE00;
+  height: 60px; /* Légère augmentation de la hauteur */
+  border-radius: 10px; /* Légère augmentation du rayon du bord */
+  color: black;
+  width: 120px; /* Légère augmentation de la largeur */
+}
+
+.btn-blue {
+  background-color: #00538B;
+  border-radius: 60px; /* Légère augmentation du rayon du bord */
+  width: 220px; /* Légère augmentation de la largeur */
+  color: white;
+}
+
+.output-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0; /* Augmentation de la marge verticale */
+  margin-top: 10px ;
+}
+
+.output {
+  width: 350px; /* Légère augmentation de la largeur */
+  height: 65px; /* Légère augmentation de la hauteur */
+  border-radius: 10px; /* Légère augmentation du rayon du bord */
+  background-color: #F2F2F2;
+  font-size: 14px;
+  padding: 15px; /* Légère augmentation du padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px; /* Légère augmentation de la marge en haut */
+}

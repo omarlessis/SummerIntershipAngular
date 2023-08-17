@@ -1,0 +1,17 @@
+<!-- sidenav.component.html -->
+<ng-container *ngIf="currentUrl === '/login'">
+  <router-outlet></router-outlet>
+</ng-container>
+
+<ng-container *ngIf="currentUrl === '/'">
+  <app-login></app-login>
+</ng-container>
+
+<ng-container *ngIf="currentUrl ==='/dashboard' || currentUrl ==='/statistics' || currentUrl ==='/products' || currentUrl ==='/coupens' || currentUrl ==='/pages' || currentUrl ==='/media/PartDamaged' || currentUrl ==='/media/DamageCode' || currentUrl ==='/media/DamageSize'|| currentUrl ==='/media/DamagePosition' || currentUrl ==='/media/Type'">
+  <div class="content-container"> <!-- Ajoutez la classe ici -->
+    <app-body [collapsed]="isSideNavCollapsed" [screenWidth]="screenWidth"></app-body>
+    <app-header [collapsed]="isSideNavCollapsed" [screenWidth]="screenWidth"></app-header>
+    <app-sidenav (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
+  </div>
+
+</ng-container>

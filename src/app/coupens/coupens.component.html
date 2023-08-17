@@ -1,0 +1,100 @@
+<style>
+  /* Custom styles for the date picker icon */
+  input[type="date"] {
+    color: rgba(0, 0, 0, 0.547);
+    font-size: 16px;
+
+    font-weight: 100;
+    padding-right: 30px;
+    background-image: url('path/to/custom-calendar-icon.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 20px;
+    border-radius: 15px;
+    padding: 10px;
+    
+    border: 1px solid #DDDDDD ; /* Change the border color to gray */
+  }
+
+  /* Custom styles to change the color of the calendar icon */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 30px;
+    filter: invert(30%) sepia(100%) saturate(5000%) hue-rotate(190deg);
+  }
+</style>
+
+<h1> Période</h1>
+
+<div style="width: 100%; background-color: rgb(255, 255, 255); padding: 20px; border-radius: 50px; margin-top: 20px; margin-right: 10px; display: flex; justify-content: space-between;">
+  <!-- Date Inputs -->
+  <div>
+    <label for="startDate" style="margin-bottom: 10px; font-size: 20px;">Du    </label>
+    <input type="date" id="startDate" name="startDate" style="width: 600px; height: 60px;">
+  </div>
+  <div>
+    <label for="endDate" style="margin-bottom: 10px; font-size: 20px;">Au    </label>
+    <input type="date" id="endDate" name="endDate" style="width: 600px; height: 60px;">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="chart-box">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h2 style="text-align: left;">Bar Chart</h2>
+    <!-- Ajoutez le bouton avec l'événement de clic -->
+    <div class="menu-btn" #menuButton (click)="openMenu()">&#8942;</div>
+  </div>
+
+  <!-- Définissez le menu contextuel -->
+  <ng-template #menuTemplate>
+    <mat-card class="menu-card">
+      <button mat-menu-item class="menu-item">Download SVG</button>
+      <button mat-menu-item class="menu-item">Download PNG</button>
+      <button mat-menu-item class="menu-item">Download CSV</button>
+    </mat-card>
+  </ng-template>
+
+  <canvas baseChart style="width: 100%; height: 400px;"
+    [data]="barChartData"
+    [options]="barChartOptions"
+    [plugins]="barChartPlugins"
+    [legend]="barChartLegend"
+    [type]="'bar'">
+  </canvas>
+</div>
+
+
+
+  <div style="display: flex; flex-wrap: wrap;">
+    <!-- Line Chart -->
+    <div style="flex: 1 1 calc(50% - 10px); background-color: white; padding: 30px; border-radius: 50px; margin-top: 20px; margin-right: 10px; height: 550px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);">
+      <h2 style="text-align: left;">Line Chart</h2>
+      <canvas baseChart style="width: 100%; height: 450px;" 
+        [datasets]="polarAreaChartDatasets"
+        [labels]="polarAreaChartLabels"
+        [legend]="polarAreaLegend"
+        [options]="polarAreaOptions"
+        [type]="'polarArea'">
+      </canvas>
+    </div>
+  
+    <!-- Pie Chart -->
+    <div style="flex: 1 1 calc(50% - 10px); background-color: white; padding: 30px; border-radius: 50px; margin-top: 20px; height: 550px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);">
+      <h2 style="text-align: left;">Pie Chart</h2>
+      <canvas baseChart style="width: 100%; height: 450px;"
+        [type]="'pie'"
+        [datasets]="pieChartDatasets"
+        [labels]="pieChartLabels"
+        [options]="pieChartOptions"
+        [plugins]="pieChartPlugins"
+        [legend]="pieChartLegend">
+      </canvas>
+    </div>
+  </div>
+

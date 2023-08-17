@@ -1,0 +1,86 @@
+.chart-container {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  .menu {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .menu-btn {
+    font-size: 25px;
+    line-height: 1;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .menu-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-options li {
+    cursor: pointer;
+  }
+  .chart-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  .cdk-overlay-transparent-backdrop {
+    background-color: transparent !important;
+  }
+  
+  .chart-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Styles du menu déroulant */
+  .menu-card {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 100px; /* Largeur minimale du menu déroulant */
+  }
+  
+  .menu-item {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    text-align: left;
+    font-size: 16px;
+    color: #dfdfdf;
+    background-color: #fff;
+ }
+  
+  .menu-item:hover {
+    background-color: #e0e0e0;
+    cursor:pointer;
+  }
+  
+  .date-label {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }

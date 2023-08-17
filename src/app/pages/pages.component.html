@@ -1,0 +1,40 @@
+<div class="header-container">
+  <h4>                  Liste des utilisateurs</h4>
+  <button id="ajouter-button">Ajouter</button>
+  
+</div>
+<div class="table-container">
+
+    <div class="white-box">
+   
+       <div class="table-row header-row">
+         <div class="data-box">Nom</div>
+         <div class="data-box">Prénom</div>
+         <div class="data-box">Genre</div>
+         <div class="data-box">Email</div>
+         <div class="data-box">Téléphone</div>
+         <div class="data-box">Action</div>
+
+         
+       </div>
+       <ng-container *ngFor="let item of dataSource.data">
+         <div class="table-row">
+           <div class="data-box">{{ item.nom }}</div>
+           <div class="data-box">{{ item.prenom }}</div>
+           <div class="data-box">{{ item.genre }}</div>
+           <div class="data-box">{{ item.email }}</div>
+           <div class="data-box">{{ item.telephone }}</div>
+<div class="data-box">
+  <button mat-icon-button class="edit-button" (click)="editItem(item)">
+    <mat-icon class="icon-small">edit</mat-icon>
+  </button>
+  <button mat-icon-button class="delete-button" (click)="deleteItem(item)">
+    <mat-icon class="icon-small">delete</mat-icon>
+  </button>
+        </div>          
+         </div>
+       </ng-container>
+    </div>
+   </div>
+   
+     

@@ -1,0 +1,218 @@
+.sidenav {
+    background:  #01538B;
+    transition: all .5s ease;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+    box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        padding: 0.938rem 0.938rem 0 0.938rem;
+        width: 100%;
+
+
+        .logo {
+            background: #fff;
+            text-align: center;
+            width: 3rem;
+            min-width: 3rem;
+            border-radius: 0.313rem;
+            padding: 0.313rem;
+            font-size: 24px;
+            font-weight: 900;
+            cursor: pointer;
+            border: none;
+
+        }
+
+        .logo-text {
+            margin-left: 1.5rem;
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+
+        }
+
+        .btn-close {
+            margin-left: auto;
+            cursor: pointer;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background-color: transparent;
+            border: none;
+
+            .fa-times {
+                color: #fff;
+                font-size: 24px;
+                
+            }
+
+        }
+
+
+    }
+}
+
+.sidenav-collapsed {
+    width: 16.5625rem;
+}
+
+.sidenav-nav {
+    list-style: none;
+    padding: 0.938rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100% - 3.65rem);
+    cursor: pointer;
+
+    .sidenav-nav-item {
+        width: 100%;
+        margin-bottom: 0.625rem;
+        
+
+        .sidenav-nav-link {
+            display: flex;
+            align-items: center;
+            height: 3rem;
+            color: #f3f3f3;
+            text-decoration: none;
+            border-radius: 0.625rem;
+            transition: all .3s ease;
+
+            .sidenav-link-icon {
+                font-size: 22px;
+                width: 2rem;
+                min-width: 2rem;
+                text-align: center;
+                padding: 12px;
+            }
+
+            .sidenav-link-text {
+                margin-left: 1.5rem;
+            }
+        }
+
+        .sidenav-nav-link:hover{
+
+            background-color: #fff;
+            color: #000;
+
+            .menu-collapse-icon{
+                color: #000;
+            }
+
+
+        }
+
+
+    }
+    .sidenav-nav-link:hover,
+.annexe-clicked:hover {
+  background-color: #003D69;
+  color: #fffefe;
+}
+
+    .sidenav-nav-item:hover {
+        .sidenav-nav-link  {
+            background-color: #003D69;
+            color: #ffffff;
+        }
+    }
+}
+
+.active {
+    background-color:#003D69;
+    .menu-collapse-icon,
+    .sublevel-nav-icon,
+
+
+    .sidenav-link-icon,
+    .sidenav-link-text {
+        color: #ffffff;
+    }
+}
+
+
+
+.menu-collapse-icon {
+
+    font-size: 25px;
+    width: 5rem;
+    min-width: 2rem;
+    text-align: center;
+    color: #f2f2f2;
+}
+
+
+.sublevel-nav{
+list-style:none;
+margin-left: 10px;
+.sublevel-nav-item {
+    .sublevel-nav-link {
+        display: flex;
+        align-items: center;
+        height: 3rem;
+        margin-left: 3rem;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 0.625rem;
+        transition: all .3s ease;
+
+        .sublevel-nav-icon{
+            font-size: 1px;
+            width: 1rem;
+            min-width: 2rem;
+            margin: 0.05rem;
+            text-align: center;
+
+
+        }
+
+        .sublevel-link-text{
+
+            margin-left: 1rem;
+
+        }
+
+
+    }
+
+    .sublevel-nav-link:hover{
+        color: #f3f3f3;
+        background-color: #003D69;
+
+        
+
+
+
+    }
+    /* Pour chaque élément du sous-menu */
+.sublevel-nav-item .sublevel-nav-link::before {
+    content: ""; /* Ajoute un contenu vide pour la pseudo-classe ::before */
+    position: absolute; /* Position absolue pour recouvrir l'élément parent */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #003D69; /* Couleur bleue pour l'effet de surbrillance */
+    border-radius: 0.625rem;
+    opacity: 0; /* Rendre l'élément invisible par défaut */
+    transition: opacity 0.3s ease; /* Transition pour l'effet de fondu */
+}
+
+.active-sublevel{
+background-color: #003D69;
+border-radius: 10px;
+
+}
+
+}
+
+}
